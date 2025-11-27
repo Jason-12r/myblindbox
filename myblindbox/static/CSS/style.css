@@ -1,0 +1,487 @@
+    /* 全局样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc; /* 浅色背景 */
+    color: #333;
+    line-height: 1.6;
+    width:100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* 统一的链接样式 */
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* 标题样式 */
+h2, h3 {
+    color: #2e6da4;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+    margin-top: 40px;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: #ddd;
+}
+
+/* 注册和登录页面的背景样式 */
+body {
+    background-size: cover;
+    background-position: center;
+}
+
+/* 注册/登录页面的表单容器 */
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    color: #28a745; /* 注册登录页面的标题颜色 */
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container input {
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-container button {
+    padding: 14px;
+    margin-top: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-container button:hover {
+    background-color: #218838;
+}
+
+.form-container p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.form-container p a {
+    color: #007bff;
+}
+
+.form-container p a:hover {
+    color: #0056b3;
+}
+
+/* 盲盒系统页面 */
+.blindbox-container {
+    padding: 30px;
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.blindbox-container h2 {
+    color: #007bff;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.blindbox-container h3 {
+    font-size: 22px;
+    color: #6c757d;
+}
+
+.blindbox-container form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.blindbox-container form textarea {
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    min-height: 150px;
+    resize: vertical;
+}
+
+.blindbox-container form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 14px;
+    font-size: 16px;
+}
+
+.blindbox-container form button:hover {
+    background-color: #0056b3;
+}
+
+.blindbox-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.blindbox-container ul li {
+    background-color: #f8f9fa;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blindbox-container ul li h4 {
+    margin: 0;
+    color: #007bff;
+}
+
+.blindbox-container ul li p {
+    font-size: 14px;
+    color: #495057;
+}
+
+.blindbox-container ul li .info {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #6c757d;
+}
+
+/* 页面底部按钮样式 */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-container button {
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+}
+
+/* 盲盒条目的样式 */
+.blindbox-item {
+    padding: 20px;
+    background-color: #f8f9fa;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blindbox-item h4 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.blindbox-item .details {
+    font-size: 14px;
+    color: #495057;
+}
+
+/* 弹出框和私信样式 */
+.modal {
+    display: none; /* 默认隐藏 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    font-size: 20px;
+    color: #007bff;
+}
+
+.modal-body {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.modal-footer {
+    margin-top: 20px;
+}
+
+.modal button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal button:hover {
+    background-color: #0056b3;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #007bff;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0056b3;
+}
+
+/* 相亲盲盒页面样式 */
+.love-blindbox-page {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding-top: 100px;
+}
+
+/* 页面头部 */
+.blindbox-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.blindbox-header h1 {
+    margin: 0;
+    color: #667eea;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Microsoft YaHei', sans-serif;
+}
+
+/* 盲盒网格容器 */
+.blindboxes-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* 盲盒卡片样式 */
+.blindbox-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(0);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 盲盒盖子 */
+.blindbox-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 15px 15px 0 0;
+}
+
+/* 盲盒装饰线 */
+.blindbox-card::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 5px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 3px;
+}
+
+/* 盲盒悬停动画效果 */
+.blindbox-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* 盲盒内容区域 */
+.blindbox-card-content {
+    margin-top: 15px;
+    padding-top: 25px;
+}
+
+.blindbox-card-content h3 {
+    color: #333;
+    margin-top: 0;
+    font-size: 1.3em;
+    text-align: left;
+}
+
+.blindbox-card-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 0.95em;
+}
+
+/* 盲盒信息区域 */
+.blindbox-card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 0.85em;
+    color: #999;
+}
+
+/* 空状态提示 */
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.empty-state p {
+    color: #666;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+/* 返回按钮 */
+.back-to-home {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: white;
+    color: #667eea;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-home:hover {
+    background-color: #667eea;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .blindboxes-grid {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+    
+    .blindbox-header h1 {
+        font-size: 2em;
+    }
+    
+    .love-blindbox-page {
+        padding-top: 80px;
+    }
+    
+    .back-to-home {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .blindbox-header h1 {
+        font-size: 1.8em;
+    }
+    
+    .blindbox-card {
+        padding: 15px;
+    }
+}

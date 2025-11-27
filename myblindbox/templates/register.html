@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <!-- 使用图片作为 favicon -->
+    <link rel="icon" href="{% static 'images/favicon.jpg' %}" type="image/jpeg">
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}"/>
+</head>
+<body style="background-image: url('{% static 'images/favicon.jpg' %}');">
+    <div class="form-container" style="opacity: 0.5">
+        <h2>注册</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">注册</button>
+        </form>
+        <p>已有账号？ <a href="{% url 'accounts:login' %}">去登录</a></p>
+    </div>
+</body>
+</html>

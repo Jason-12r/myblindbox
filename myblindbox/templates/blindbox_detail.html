@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盲盒详情</title>
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+</head>
+<body>
+    <div class="blindbox-container">
+        <h2>盲盒详情</h2>
+
+        <!-- 显示盲盒的内容 -->
+        <p><strong>内容：</strong>{{ box.content }}</p>
+        <p><strong>发布者：</strong>{{ box.user.username }}</p>
+        <p><strong>创建时间：</strong>{{ box.created_at }}</p>
+
+        <!-- 显示该盲盒下的所有聊天记录 -->
+        <h3>聊天记录</h3>
+        <ul>
+            {% for message in box.messages.all %}
+                <li>
+                    <strong>{{ message.sender.username }}:</strong> {{ message.content }}
+                    <span>({{ message.created_at }})</span>
+                </li>
+            {% empty %}
+                <li>没有任何聊天记录。</li>
+            {% endfor %}
+        </ul>
+
+        <!-- 如果用户已登录，允许发送消息 -->
+        {% if user.is_authenticated %}
+            <h4>发送消息</h4>
+            <form method="POST">
+                {% csrf_token %}
+                <label for="content">消息内容：</label>
+                <textarea id="content" name="content" placeholder="输入你的消息..." rows="4" required></textarea><br>
+                <button type="submit">发送消息</button>
+            </form>
+
+        {% else %}
+            <p>请登录以发送消息。</p>
+        {% endif %}
+
+        <br>
+        <a href="{% url 'blindbox:blindbox' %}">返回盲盒列表</a>
+    </div>
+</body>
+</html>

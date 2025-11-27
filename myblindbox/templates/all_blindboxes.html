@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相亲盲盒</title>
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+</head>
+<body class="love-blindbox-page">
+    <!-- 页面头部 -->
+    <header class="blindbox-header">
+        <h1>相亲盲盒</h1>
+    </header>
+    
+    <!-- 盲盒列表容器 -->
+    <div class="blindboxes-grid">
+        {% for box in blind_boxes %}
+            <!-- 盲盒项 -->
+            <div class="blindbox-card" onclick="window.location.href='{% url 'blindbox:blindbox_detail' box.id %}'">
+                <div class="blindbox-card-content">
+                    <h3>{{ box.user.username }}</h3>
+                    <p>{{ box.content|truncatechars:80 }}</p>
+                    <div class="blindbox-card-info">
+                        <span>发布时间: {{ box.created_at|date:"Y-m-d H:i" }}</span>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <div class="empty-state">
+                <p>还没有其他用户发布盲盒，快来成为第一个吧！</p>
+            </div>
+        {% endfor %}
+    </div>
+    
+    <!-- 返回按钮 -->
+    <button class="back-to-home" onclick="window.location.href='{% url 'blindbox:blindbox' %}'">
+        ←
+    </button>
+</body>
+</html>

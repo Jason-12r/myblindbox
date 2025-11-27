@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盲盒</title>
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+</head>
+<body style="background-image: url('{% static 'images/favicon.jpg' %}');">
+    <div class="blindbox-container" style="opacity: 0.5">
+        <h2>欢迎来到盲盒系统</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">发布盲盒</button>
+        </form>
+        <h3>已发布的盲盒</h3>
+        <ul>
+            {% for box in blind_boxes %}
+                <li>
+                    <p>{{ box.content }} - {{ box.created_at }}</p>
+                    <!-- 添加跳转链接，点击查看盲盒详情 -->
+                    <a href="{% url 'blindbox:blindbox_detail' box.id %}">查看盲盒</a>
+                </li>
+            {% empty %}
+                <li>你还没有发布任何盲盒。</li>
+            {% endfor %}
+        </ul>
+
+    </div>
+</body>
+</html>
